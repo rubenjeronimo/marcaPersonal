@@ -467,6 +467,7 @@
     <!-- Pricing Plan End -->
 
 <!-- Vendor Start -->
+    <!--
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5 mb-5">
             <div class="bg-white">
@@ -484,6 +485,7 @@
             </div>
         </div>
     </div>
+    -->
     <!-- Vendor End -->
 
     <!-- Blog Start -->
@@ -506,7 +508,6 @@
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         var archivos = JSON.parse(xhr.responseText);
-
                         // Obtener los 3 últimos posts publicados
                         var ultimosPosts = archivos.filter(function(archivo) {
                             return (

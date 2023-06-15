@@ -1,5 +1,4 @@
 <?php
-//echo("php funcionando");
 
 $carpeta = 'blog';
 $archivos = [];
@@ -15,8 +14,9 @@ if (is_dir($carpeta)) {
           continue;
         }
 
-        $fechaCreacion = date("d M, Y", filemtime($rutaArchivo));
-        $contenido = file_get_contents($rutaArchivo);
+        $rutaCompletaArchivo = realpath($rutaArchivo);
+        $fechaCreacion = date("d M, Y", filemtime($rutaCompletaArchivo));
+        $contenido = file_get_contents($rutaCompletaArchivo);
 
         // Extraer datos de la entrada del blog
         $titulo = 'Título no encontrado';
@@ -40,6 +40,8 @@ if (is_dir($carpeta)) {
         preg_match('/<category id="categoriaPost">(.*?)<\/category>/', $contenido, $categoriaMatch);
         $categoria = isset($categoriaMatch[1]) ? $categoriaMatch[1] : 'Categoría no encontrada';
 
+
+
         // Buscar autor utilizando expresiones regulares
         preg_match('/<author id="autorPost">(.*?)<\/author>/', $contenido, $autorMatch);
         if (isset($autorMatch[1])) {
@@ -50,6 +52,7 @@ if (is_dir($carpeta)) {
         preg_match('/<img id="imagenPost" src="(.*?)"/', $contenido, $imagenMatch);
         $imagen = isset($imagenMatch[1]) ? $imagenMatch[1] : '';
 
+        
         $archivos[] = array(
           "nombre" => $archivo,
           "ruta" => $rutaArchivo,
@@ -60,27 +63,14 @@ if (is_dir($carpeta)) {
           "descripcion" => $descripcion,
           "imagen" => $imagen
         );
-
       }
     }
     closedir($handle);
   }
 }
-//print_r($archivos);
-// Convertir cadenas a UTF-8 si no están en ese formato
-foreach ($archivos as $clave => $valor) {
-    if (is_string($valor)) {
-        $archivos[$clave] = iconv('UTF-8', 'ISO-8859-1//TRANSLIT', $valor);
-    }
-}
 
-// Eliminar o reemplazar caracteres no válidos
-$archivos = array_map(function($valor) {
-    return iconv('UTF-8', 'UTF-8//IGNORE', $valor);
-}, $archivos);
 $json = json_encode($archivos);
-if ($json === false) {
-    echo "Error en json_encode: " . json_last_error_msg();
-} else {
-    echo $json;
-}?>
+header('Content-Type: application/json');
+echo $json;
+
+?>
