@@ -553,3 +553,7 @@ h6,
     }
 }
 
+#postRecientes li {
+  list-style: none; /* Elimina los puntos */
+  width: 100%; /* Ancho igual para todos los elementos */
+}

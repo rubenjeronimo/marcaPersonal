@@ -40,8 +40,6 @@ if (is_dir($carpeta)) {
         preg_match('/<category id="categoriaPost">(.*?)<\/category>/', $contenido, $categoriaMatch);
         $categoria = isset($categoriaMatch[1]) ? $categoriaMatch[1] : 'Categoría no encontrada';
 
-
-
         // Buscar autor utilizando expresiones regulares
         preg_match('/<author id="autorPost">(.*?)<\/author>/', $contenido, $autorMatch);
         if (isset($autorMatch[1])) {
@@ -51,7 +49,6 @@ if (is_dir($carpeta)) {
         // Buscar imagen utilizando expresiones regulares
         preg_match('/<img id="imagenPost" src="(.*?)"/', $contenido, $imagenMatch);
         $imagen = isset($imagenMatch[1]) ? $imagenMatch[1] : '';
-
         
         $archivos[] = array(
           "nombre" => $archivo,
@@ -69,8 +66,6 @@ if (is_dir($carpeta)) {
   }
 }
 
-$json = json_encode($archivos);
 header('Content-Type: application/json');
-echo $json;
-
+echo json_encode($archivos);
 ?>
