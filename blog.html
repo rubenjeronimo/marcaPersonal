@@ -172,151 +172,134 @@
                         
 
                         <script>
-                        // Obtener los datos del servidor utilizando AJAX
-                        var xhr = new XMLHttpRequest();
-                        xhr.open("GET", "getArchivos.php", true);
+                            // Obtener los datos del servidor utilizando AJAX
+                            var xhr = new XMLHttpRequest();
+                            xhr.open("GET", "getArchivos.php", true);
 
-                        xhr.onreadystatechange = function() {
-                            if (xhr.readyState === 4) {
-                                console.log("Estado de la respuesta:", xhr.status);
-                                console.log("Cabeceras de la respuesta:", xhr.getAllResponseHeaders());
-                                console.log("Contenido de la respuesta:", xhr.responseText);
-                                if (xhr.status === 200) {
-                                    if (xhr.responseText) {
-                                        try {
-                                            var archivos = JSON.parse(xhr.responseText);
+                            xhr.onreadystatechange = function() {
+                                if (xhr.readyState === 4) {
+                                    console.log("Estado de la respuesta:", xhr.status);
+                                    console.log("Cabeceras de la respuesta:", xhr.getAllResponseHeaders());
+                                    console.log("Contenido de la respuesta:", xhr.responseText);
+                                    if (xhr.status === 200) {
+                                        if (xhr.responseText) {
+                                            try {
+                                                var archivos = JSON.parse(xhr.responseText);
+                                                // Resto del código
+                                            } catch (error) {
+                                                console.error("Error al analizar la respuesta JSON:", error);
+                                            }
                                             // Resto del código
-                                        } catch (error) {
-                                            console.error("Error al analizar la respuesta JSON:", error);
+                                        } else {
+                                            console.error("La respuesta del servidor está vacía.");
                                         }
-                                        // Resto del código
-                                    } else {
-                                        console.error("La respuesta del servidor está vacía.");
                                     }
-                                }
                                 
 
-                            if (xhr.readyState === 4 && xhr.status === 200) {
-                                var archivos = JSON.parse(xhr.responseText);
-                                var categorias = [];
+                                if (xhr.readyState === 4 && xhr.status === 200) {
+                                    var archivos = JSON.parse(xhr.responseText);
+                                    var categorias = [];
 
-                                // Generar la lista de archivos en HTML
-                                var archivoList = document.getElementById("archivoList");
-                                var listadoCategorias = document.getElementById("listadoCategorias");
+                                    // Generar la lista de archivos en HTML
+                                    var archivoList = document.getElementById("archivoList");
+                                    var listadoCategorias = document.getElementById("listadoCategorias");
 
-                                //ultimos post
-                                var postRecientes = document.getElementById("postRecientes");
+                                    //ultimos post
+                                    var postRecientes = document.getElementById("postRecientes");
 
-                                // Obtener los 5 últimos posts publicados
-                                var ultimosPosts = archivos.filter(function(archivo) {
-                                  return (
-                                    archivo.nombre !== "plantillaPost.html" &&
-                                    archivo.tipo !== "carpeta" &&
-                                    archivo.nombre !== "imagenes"
-                                  );
-                                }).slice(-5);
-
-                                // Generar la lista de los 5 últimos posts en HTML
-                                ultimosPosts.forEach(function(post) {
-                                  var listItem = document.createElement("li");
-                                  listItem.innerHTML = `
-                                  <div class="d-flex rounded overflow-hidden mb-3"><img class="img-fluid" src=${post.imagen} style="width: 100px; height: 100px; object-fit: cover;" alt=""><a href="${post.ruta}" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">${post.titulo}</a></div>
-                                  `;
-                                  postRecientes.appendChild(listItem);
-                                });
-
-
-
-
-
-
-
-
-                                archivos.forEach(function(archivo) {
-                                    if (
+                                    // Obtener los 5 últimos posts publicados
+                                    var ultimosPosts = archivos.filter(function(archivo) {
+                                      return (
                                         archivo.nombre !== "plantillaPost.html" &&
                                         archivo.tipo !== "carpeta" &&
                                         archivo.nombre !== "imagenes"
-                                    ) {
-                                        var listItem = document.createElement("div");
-                                        listItem.className = "col-md-4";
-
-                                        listItem.innerHTML = `
-                                          <div class="blog-item bg-light rounded overflow-hidden">
-                                            <div class="blog-img position-relative overflow-hidden">
-                                              <img class="img-fluid" src="${archivo.imagen}" alt="">
-                                              <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">${archivo.categoria}</a>
-                                            </div>
-                                            <div class="p-4">
-                                              <div class="d-flex mb-3">
-                                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>${archivo.autor}</small>
-                                                <small><i class="far fa-calendar-alt text-primary me-2"></i>${archivo.fecha}</small>
+                                      );
+                                    }).slice(-5);
+                                    // Generar la lista de los 5 últimos posts en HTML
+                                    ultimosPosts.forEach(function(post) {
+                                      var listItem = document.createElement("li");
+                                      listItem.innerHTML = `
+                                      <div class="d-flex rounded overflow-hidden mb-3"><img class="img-fluid" src=${post.imagen} style="width: 100px; height: 100px; object-fit: cover;" alt=""><a href="${post.ruta}" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">${post.titulo}</a></div>
+                                      `;
+                                      postRecientes.appendChild(listItem);
+                                    }
+                                    archivos.forEach(function(archivo) {
+                                        if (
+                                            archivo.nombre !== "plantillaPost.html" &&
+                                            archivo.tipo !== "carpeta" &&
+                                            archivo.nombre !== "imagenes"
+                                        ) {
+                                            var listItem = document.createElement("div");
+                                            listItem.className = "col-md-4";
+                                            listItem.innerHTML = `
+                                              <div class="blog-item bg-light rounded overflow-hidden">
+                                                <div class="blog-img position-relative overflow-hidden">
+                                                  <img class="img-fluid" src="${archivo.imagen}" alt="">
+                                                  <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">${archivo.categoria}</a>
+                                                </div>
+                                                <div class="p-4">
+                                                  <div class="d-flex mb-3">
+                                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>${archivo.autor}</small>
+                                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>${archivo.fecha}</small>
+                                                  </div>
+                                                  <h4 class="mb-3">${archivo.titulo}</h4>
+                                                  <p>${archivo.descripcion}</p>
+                                                  <a class="text-uppercase" href="${archivo.ruta}">Leer más<i class="bi bi-arrow-right"></i></a>
+                                                </div>
                                               </div>
-                                              <h4 class="mb-3">${archivo.titulo}</h4>
-                                              <p>${archivo.descripcion}</p>
-                                              <a class="text-uppercase" href="${archivo.ruta}">Leer más<i class="bi bi-arrow-right"></i></a>
-                                            </div>
-                                          </div>
-                                        `;
-                                        archivoList.appendChild(listItem);
-
-                                        var categoria = archivo.categoria;
-                                        if (!categorias.includes(categoria)) {
-                                            categorias.push(categoria);
-                                            var li = document.createElement('li');
-                                            var a = document.createElement('a');
-                                            a.href = '#';
-                                            a.innerHTML = '<i class="bi bi-arrow-right me-2"></i>' + categoria;
-                                            //a.className = "h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2";
-                                            a.className = "h5 fw-semi-bold py-1 px-3 mb-2";
-                                            li.appendChild(a);
-                                            listadoCategorias.appendChild(li);
-
-                                            // Agregar evento de clic a cada categoría
-                                            a.addEventListener('click', function() {
-                                                // Filtrar los archivos según la categoría seleccionada
-                                                var archivosFiltrados = archivos.filter(function(archivo) {
-                                                    return archivo.categoria === categoria;
-                                                });
-
-                                                // Limpiar la lista de archivos
-                                                archivoList.innerHTML = '';
-
-                                                // Generar la lista de archivos filtrados en HTML
-                                                archivosFiltrados.forEach(function(archivoFiltrado) {
-                                                    var listItemFiltrado = document.createElement("li");
-
-                                                    listItemFiltrado.innerHTML = `
-                                                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                                                            <div class="blog-item bg-light rounded overflow-hidden">
-                                                                <div class="blog-img position-relative overflow-hidden">
-                                                                    <img class="img-fluid" src=${archivoFiltrado.imagen} alt="">
-                                                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">${archivoFiltrado.categoria}</a>
-                                                                </div>
-                                                                <div class="p-4">
-                                                                    <div class="d-flex mb-3">
-                                                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>${archivoFiltrado.autor}</small>
-                                                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>${archivoFiltrado.fecha}</small>
+                                            `;
+                                            archivoList.appendChild(listItem);
+                                            var categoria = archivo.categoria;
+                                            if (!categorias.includes(categoria)) {
+                                                categorias.push(categoria);
+                                                var li = document.createElement('li');
+                                                var a = document.createElement('a');
+                                                a.href = '#';
+                                                a.innerHTML = '<i class="bi bi-arrow-right me-2"></i>' + categoria;
+                                                //a.className = "h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2";
+                                                a.className = "h5 fw-semi-bold py-1 px-3 mb-2";
+                                                li.appendChild(a);
+                                                listadoCategorias.appendChild(li);
+                                                // Agregar evento de clic a cada categoría
+                                                a.addEventListener('click', function() {
+                                                    // Filtrar los archivos según la categoría seleccionada
+                                                    var archivosFiltrados = archivos.filter(function(archivo) {
+                                                        return archivo.categoria === categoria;
+                                                    });
+                                                    // Limpiar la lista de archivos
+                                                    archivoList.innerHTML = '';
+                                                    // Generar la lista de archivos filtrados en HTML
+                                                    archivosFiltrados.forEach(function(archivoFiltrado) {
+                                                        var listItemFiltrado = document.createElement("li");
+                                                        listItemFiltrado.innerHTML = `
+                                                            <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
+                                                                <div class="blog-item bg-light rounded overflow-hidden">
+                                                                    <div class="blog-img position-relative overflow-hidden">
+                                                                        <img class="img-fluid" src=${archivoFiltrado.imagen} alt="">
+                                                                        <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">${archivoFiltrado.categoria}</a>
                                                                     </div>
-                                                                    <h4 class="mb-3">${archivoFiltrado.titulo}</h4>
-                                                                    <p>${archivoFiltrado.descripcion}</p>
-                                                                    <a class="text-uppercase" href="${archivoFiltrado.ruta}">Leer más<i class="bi bi-arrow-right"></i></a>
+                                                                    <div class="p-4">
+                                                                        <div class="d-flex mb-3">
+                                                                            <small class="me-3"><i class="far fa-user text-primary me-2"></i>${archivoFiltrado.autor}</small>
+                                                                            <small><i class="far fa-calendar-alt text-primary me-2"></i>${archivoFiltrado.fecha}</small>
+                                                                        </div>
+                                                                        <h4 class="mb-3">${archivoFiltrado.titulo}</h4>
+                                                                        <p>${archivoFiltrado.descripcion}</p>
+                                                                        <a class="text-uppercase" href="${archivoFiltrado.ruta}">Leer más<i class="bi bi-arrow-right"></i></a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    `;
-                                                    archivoList.appendChild(listItemFiltrado);
+                                                        `;
+                                                        archivoList.appendChild(listItemFiltrado);
+                                                    });
                                                 });
-                                            });
+                                            }
                                         }
-                                    }
-                                });
-                            }
-                        };
-
-                        xhr.send();
-                    </script>
-
+                                    });
+                                }
+                            };
+                            xhr.send();
+                        </script>
                     </div>
                 </div>
                 <!-- Blog list End -->
