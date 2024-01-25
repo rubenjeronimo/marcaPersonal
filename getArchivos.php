@@ -43,6 +43,11 @@ if (is_dir($carpeta)) {
         $rutaCompletaArchivo = realpath($rutaArchivo);
         $fechaCreacion = date("d M, Y", filemtime($rutaCompletaArchivo));
         $contenido = file_get_contents($rutaCompletaArchivo);
+        $fechaCreacion = date("d M, Y", filemtime($rutaArchivo));
+        $contenido = file_get_contents($rutaArchivo);
+        $rutaCompletaArchivo = realpath($rutaArchivo);
+        $fechaCreacion = date("d M, Y", filemtime($rutaCompletaArchivo));
+        $contenido = file_get_contents($rutaCompletaArchivo);
 
         // Extraer datos de la entrada del blog
         $titulo = 'Título no encontrado';
@@ -76,6 +81,8 @@ if (is_dir($carpeta)) {
         preg_match('/<img id="imagenPost" src="(.*?)"/', $contenido, $imagenMatch);
         $imagen = isset($imagenMatch[1]) ? $imagenMatch[1] : '';
 
+
+        
         $archivos[] = array(
           "nombre" => $archivo,
           "ruta" => $rutaArchivo,
