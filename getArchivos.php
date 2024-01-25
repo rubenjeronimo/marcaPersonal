@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 //var_dump($_SERVER); // Agrega el punto y coma aquí
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
@@ -19,6 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     header("Access-Control-Max-Age: 86400");
     exit;
 }
+=======
+>>>>>>> 23831a31a2f90a34584ba7b7a14c8ae02aab3201
 
 $carpeta = 'blog';
 $archivos = [];
@@ -34,8 +37,14 @@ if (is_dir($carpeta)) {
           continue;
         }
 
+<<<<<<< HEAD
         $fechaCreacion = date("d M, Y", filemtime($rutaArchivo));
         $contenido = file_get_contents($rutaArchivo);
+=======
+        $rutaCompletaArchivo = realpath($rutaArchivo);
+        $fechaCreacion = date("d M, Y", filemtime($rutaCompletaArchivo));
+        $contenido = file_get_contents($rutaCompletaArchivo);
+>>>>>>> 23831a31a2f90a34584ba7b7a14c8ae02aab3201
 
         // Extraer datos de la entrada del blog
         $titulo = 'Título no encontrado';
@@ -68,7 +77,11 @@ if (is_dir($carpeta)) {
         // Buscar imagen utilizando expresiones regulares
         preg_match('/<img id="imagenPost" src="(.*?)"/', $contenido, $imagenMatch);
         $imagen = isset($imagenMatch[1]) ? $imagenMatch[1] : '';
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 23831a31a2f90a34584ba7b7a14c8ae02aab3201
         $archivos[] = array(
           "nombre" => $archivo,
           "ruta" => $rutaArchivo,
@@ -85,5 +98,9 @@ if (is_dir($carpeta)) {
   }
 }
 
+<<<<<<< HEAD
+=======
+header('Content-Type: application/json');
+>>>>>>> 23831a31a2f90a34584ba7b7a14c8ae02aab3201
 echo json_encode($archivos);
 ?>
