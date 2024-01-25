@@ -222,7 +222,7 @@
                                       <div class="d-flex rounded overflow-hidden mb-3"><img class="img-fluid" src=${post.imagen} style="width: 100px; height: 100px; object-fit: cover;" alt=""><a href="${post.ruta}" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">${post.titulo}</a></div>
                                       `;
                                       postRecientes.appendChild(listItem);
-                                    }
+                                    });
                                     archivos.forEach(function(archivo) {
                                         if (
                                             archivo.nombre !== "plantillaPost.html" &&
