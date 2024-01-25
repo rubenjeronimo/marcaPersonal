@@ -146,3 +146,26 @@
 
 // para el BLOG
 
+// para el CHATBOT
+
+/*var chatbotToggle = document.getElementById('chatbot-toggle');
+var chatbotIframe = document.getElementById('dialogflow-webdemo');
+
+chatbotToggle.addEventListener('click', function() {
+  chatbotIframe.src = 'https://console.dialogflow.com/api-client/demo/embedded/556be304-8c0e-46c2-8fd4-f636796319ae';
+  chatbotToggle.style.display = 'none';
+});*/
+
+function toggleChatbot() {
+  var chatbotToggle = document.getElementById('chatbot-toggle');
+  var chatbotIframe = document.getElementById('dialogflow-webdemo');
+  
+  if (chatbotIframe.style.display === 'none') {
+    chatbotIframe.src = 'https://console.dialogflow.com/api-client/demo/embedded/556be304-8c0e-46c2-8fd4-f636796319ae';
+    chatbotIframe.style.display = 'block';
+    chatbotToggle.style.display = 'none';
+  } else {
+    chatbotIframe.style.display = 'none';
+    chatbotToggle.style.display = 'block';
+  }
+}

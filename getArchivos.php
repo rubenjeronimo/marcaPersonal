@@ -1,4 +1,5 @@
 <?php
+
 //var_dump($_SERVER); // Agrega el punto y coma aquí
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
@@ -20,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit;
 }
 
+
 $carpeta = 'blog';
 $archivos = [];
 
@@ -34,8 +36,13 @@ if (is_dir($carpeta)) {
           continue;
         }
 
+
         $fechaCreacion = date("d M, Y", filemtime($rutaArchivo));
         $contenido = file_get_contents($rutaArchivo);
+
+        $rutaCompletaArchivo = realpath($rutaArchivo);
+        $fechaCreacion = date("d M, Y", filemtime($rutaCompletaArchivo));
+        $contenido = file_get_contents($rutaCompletaArchivo);
 
         // Extraer datos de la entrada del blog
         $titulo = 'Título no encontrado';
@@ -85,5 +92,7 @@ if (is_dir($carpeta)) {
   }
 }
 
+
+header('Content-Type: application/json');
 echo json_encode($archivos);
 ?>
