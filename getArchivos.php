@@ -1,4 +1,25 @@
 <?php
+//var_dump($_SERVER); // Agrega el punto y coma aquí
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json");
+
+// Verificar que la solicitud sea GET a este script
+if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
+    echo json_encode(["message" => "Acceso no autorizado"]);
+    exit;
+}
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+    header("Access-Control-Allow-Headers: Content-Type");
+    header("Access-Control-Max-Age: 86400");
+    exit;
+}
+
 $carpeta = 'blog';
 $archivos = [];
 
@@ -38,8 +59,6 @@ if (is_dir($carpeta)) {
         preg_match('/<category id="categoriaPost">(.*?)<\/category>/', $contenido, $categoriaMatch);
         $categoria = isset($categoriaMatch[1]) ? $categoriaMatch[1] : 'Categoría no encontrada';
 
-
-
         // Buscar autor utilizando expresiones regulares
         preg_match('/<author id="autorPost">(.*?)<\/author>/', $contenido, $autorMatch);
         if (isset($autorMatch[1])) {
@@ -50,7 +69,6 @@ if (is_dir($carpeta)) {
         preg_match('/<img id="imagenPost" src="(.*?)"/', $contenido, $imagenMatch);
         $imagen = isset($imagenMatch[1]) ? $imagenMatch[1] : '';
 
-        
         $archivos[] = array(
           "nombre" => $archivo,
           "ruta" => $rutaArchivo,

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Me llamo Rubén</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Molino de la Navata, Galapagar, Madrid</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+34 679 068 143</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>ruben.jeronimo.fernandez@gmail.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://twitter.com/rjeronimof" target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
+                    <!--<a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>-->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/in/ruben-jeronimo-fernandez/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/rubenjeronimofernandez/" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
+                    <!--<a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar & Carousel Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <!--<h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Rubén Jerónimo Fernández</h1>-->
+                <h1 class="m-0"><img id="logo" src="img/logoMBlanco.png">Rubén Jerónimo Fernández</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="#activando" class="nav-item nav-link">Activando</a>
+                    <a href="#servicios" class="nav-item nav-link">Servicios</a>
+                    <a href="#sobremi" class="nav-item nav-link">Sobre mi</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Herramientas</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="canvas.html" class="dropdown-item">Canvas de aprendizaje</a>
+                            <a href="innovacion.html" class="dropdown-item">Perfil de innovación individual</a>
+                            <a href="equipo.html" class="dropdown-item">Test diagnósis de equipo</a>
+                            <a href="testObjetivos.html" class="dropdown-item">Test de objetivos</a>
+                        </div>
+                    </div>
+                    <a href="#blog" class="nav-item nav-link">Blog</a>
+                    <a href="#contacto" class="nav-item nav-link">Contacto</a>
+
+                </div>
+                <!--<butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a>-->
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar & Carousel End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+    <main>
+        <div class="whole-wrap">
+            <div class="container box_1170" style="margin-top: 100px;">
+                <div class="section-top-border">
+                    <h3 class="tituloBungee">Perfil Creativo de Solución de Problemas</h3>
+                    <div class="tablaInnoResultados">
+                         <div class="col-md-12">
+                            <p><em class="azul" id="nombrePerfil"> </em></p>
+                            <p><em class="azul" id="perfilPerfil" style="text-transform: uppercase; font-size: 18px;"></em></p>
+                            
+                            <script type="text/javascript">  
+                            var nom ='$nombre';         
+                                /*var nom="Ruben";
+                                var mail;
+                                var C1=27*3;
+                                var C2=34*3;
+                                var C3=38*3;
+                                var C4=21*3;
+                                var per="Conceptualizador";*/
+                                document.getElementById('nombrePerfil').innerHTML=nom+"<p>, tu orientación más fuerte es hacia un perfil: <br></p>";
+                                document.getElementById('perfilPerfil').innerHTML=" "+per;
+                            </script>
+
+                            <p style="font-size: 14px;"><em class="purpura">• Este punto</em> te muestra tu tendencia en la generación y ejecución de ideas:</p>
+                            <p style="font-size: 14px;">Algunos aspectos típicos de un perfil como el tuyo son:</p>
+                            <p id='textoPerfilInnovador' style="font-size:14px"><?php echo $textoPerfil;?></p>
+                            
+                            <!--<script type="text/javascript">
+                                var per="Conceptualizador";
+                                var texto=document.getElementById('textoPerfilInnovador');
+                                switch(per){
+                                    case "Conceptualizador":
+                                        texto.innerHTML="Como Conceptualizador, formas parte del segundo grupo más pequeño de gente que realiza el perfil de Innovación. Nuestros datos indican que los conceptualizadores a menudo están trabajando en roles estratégicos dentro de las empresas o responsabilidades donde la comprensión forma parte de su trabajo.<br>Todos somos una mezcla de estilos y el perfil de innovación mide el estado de pensamiento al que tiende una persona en lugar de analizar un rasgo de personalidad.<br>El estilo opuesto es el Implementador. Los conflictos potenciales que puedas tener en un entorno de trabajo o de equipo, pueden darse con los implementadores, ya que tenéis estilos opuestos.<br>Los Conceptualizadores suelen percibir a los Implementadores como personas:<br>• Poco confiables, ya que son poco trabajadores<br>• Impulsivas, no parece que piensen antes de actuar<br>• Testarudas<br>Los implementadores suelen ver a los Conceptualizadores como personas que:<br>• No se les debe pagar<br>• Nunca se los ve hacer nada<br>• Siempre los ves pensando";
+                                        break;
+                                    case "Generador":
+                                        texto.innerHTML="soy genenennenene";
+                                        break;
+                                    case "Optimizador":
+                                        texto.innerHTML="soy opttititit";
+                                        break;
+                                    case "Implementador":
+                                        texto.innerHTML="soy imlelele";
+                                        break;
+                                    default:
+                                    texto.innerHTML="nnonooononono";
+                                        break;  
+                                }
+                            </script>-->
+                            
+                         </div>
+
+                        <div>
+                            <!--preparacion del gráfico-->
+                            <div style="margin: 0 auto;justify-content: center;">
+                                <canvas id="canvas" width="600" height="600" style="margin: 0 auto 0 auto;display: block;">
+                                <script type="text/javascript">
+                                    var canvas = document.getElementById('canvas');
+                                    var ancho=canvas.width;
+                                    if (canvas.getContext) {
+                                        var ctx=canvas.getContext('2d');
+                                        ctx.strokeStyle='#adadad';
+                                        ctx.fillStyle='#adadad';
+                                        ctx.beginPath();
+                                        ctx.moveTo(40,ancho/2);
+                                        ctx.lineTo(ancho-40,ancho/2);
+                                        ctx.closePath();
+                                        ctx.stroke();
+                                        ctx.beginPath();
+                                        ctx.moveTo(ancho/2,40);
+                                        ctx.lineTo(ancho/2,ancho-40);
+                                        ctx.closePath();
+                                        ctx.stroke();
+                                        ctx.font = "10pt comfortaa";
+                                        ctx.save();
+                                        ctx.textAlign="center";
+                                        ctx.fillText("Experiencia",ancho/2,20);
+                                        ctx.fillText("Formación de ideas",ancho-70,20+ancho/2);
+                                        ctx.fillText("Pensamiento",ancho/2,ancho-20);
+                                        ctx.fillText("Evaluación",50,20+ancho/2);
+                                        ctx.restore();
+                                        ctx.globalAlpha=0.5;
+
+                                        //sector generadores
+                                        ctx.fillStyle='#c9daf8ff';
+                                        ctx.beginPath();
+                                        ctx.moveTo(ancho/2,ancho/2);
+                                        ctx.lineTo(ancho/2,ancho/2-C1);
+                                        ctx.quadraticCurveTo(ancho/2+C2,ancho/2-C1,ancho/2+C2,ancho/2);
+                                        ctx.lineTo(ancho/2,ancho/2);
+                                        ctx.closePath();
+                                        ctx.fill();
+
+                                        //arco secundario generadores
+                                        var offsetSecundario=3;
+                                        offsetSecundario=((offsetSecundario*(2*Math.PI))/360);
+                                        ctx.beginPath();
+                                        ctx.globalAlpha=1;
+                                        ctx.arc(ancho/2,ancho/2,150,(Math.PI*3/2)+offsetSecundario,0-offsetSecundario,false);
+                                        //ctx.lineTo(330,191);
+                                        ctx.arc(ancho/2,ancho/2,130,0-offsetSecundario,(Math.PI*3/2)+offsetSecundario,true);
+                                        ctx.closePath();
+                                        ctx.fill();
+                                        ctx.font = "15pt comfortaa";
+                                        ctx.fillText("Generadores",canvas.width/2+canvas.width/15,40);
+
+                                        //sector conceptualizadores
+                                        ctx.globalAlpha=0.5;
+                                        ctx.fillStyle='#d5a6bdff';
+                                        ctx.beginPath();
+                                        ctx.moveTo(ancho/2,ancho/2);
+                                        ctx.lineTo(ancho/2+C2,ancho/2);
+                                        ctx.quadraticCurveTo(ancho/2+C2,ancho/2+C3,ancho/2,ancho/2+C3);
+                                        ctx.lineTo(ancho/2,ancho/2);
+                                        ctx.closePath();
+                                        ctx.fill();
+
+                                        //arco secundario conceptualizadores
+                                        ctx.beginPath();
+                                        ctx.globalAlpha=1;
+                                        ctx.arc(ancho/2,ancho/2,150,0+offsetSecundario,(Math.PI/2)-offsetSecundario,false);
+                                        //ctx.lineTo(330,191);
+                                        ctx.arc(ancho/2,ancho/2,130,(Math.PI/2)-offsetSecundario,0+offsetSecundario,true);
+                                        ctx.closePath();
+                                        ctx.fill();
+                                        ctx.fillText("Conceptualizadores",canvas.width/2+canvas.width/15,500);
+
+                                        //sector optimizadores
+                                        ctx.globalAlpha=0.5;
+                                        ctx.fillStyle='#e06666ff';
+                                        ctx.beginPath();
+                                        ctx.moveTo(ancho/2,ancho/2);
+                                        ctx.lineTo(ancho/2,ancho/2+C3);
+                                        ctx.quadraticCurveTo(ancho/2-C4,ancho/2+C3,ancho/2-C4,ancho/2);
+                                        ctx.lineTo(ancho/2,ancho/2);
+                                        ctx.closePath();
+                                        ctx.fill();
+
+                                        //arco secundario optimizadores
+                                        ctx.beginPath();
+                                        ctx.globalAlpha=1;
+                                        ctx.arc(ancho/2,ancho/2,150,(Math.PI/2)+offsetSecundario,(Math.PI)-offsetSecundario,false);
+                                        //ctx.lineTo(330,191);
+                                        ctx.arc(ancho/2,ancho/2,130,(Math.PI)-offsetSecundario,(Math.PI/2)+offsetSecundario,true);
+                                        ctx.closePath();
+                                        ctx.fill();
+                                        ctx.fillText("Optimizadores",canvas.width/10,500);
+
+                                        //sector implementadores
+                                        ctx.globalAlpha=0.5;
+                                        ctx.fillStyle='#f9cb9cff';
+                                        ctx.beginPath();
+                                        ctx.moveTo(ancho/2,ancho/2);
+                                        ctx.lineTo(ancho/2-C4,ancho/2);
+                                        ctx.quadraticCurveTo(ancho/2-C4,ancho/2-C1,ancho/2,ancho/2-C1);
+                                        ctx.lineTo(ancho/2,ancho/2);
+                                        ctx.closePath();
+                                        ctx.fill();
+
+                                        //arco secundario implementadores
+                                        ctx.beginPath();
+                                        ctx.globalAlpha=1;
+                                        ctx.arc(ancho/2,ancho/2,150,(Math.PI)+offsetSecundario,(Math.PI*(3/2))-offsetSecundario,false);
+                                        //ctx.lineTo(330,191);
+                                        ctx.arc(ancho/2,ancho/2,130,(Math.PI*(3/2))-offsetSecundario,(Math.PI)+offsetSecundario,true);
+                                        ctx.closePath();
+                                        ctx.fill();
+                                        ctx.fillText("Implementadores",canvas.width/10,40);
+                                    }
+                                </script>
+                            </canvas>
+                            </div>
+                            
+                        </div>
+                       
+                        <div class="col-md-12 mt-sm-20">
+                            <script type="text/javascript">
+                                var nom;
+                                var mail;
+                                var C1=27*3;
+                                var C2=34*3;
+                                var C3=38*3;
+                                var C4=21*3;
+                                var per;
+                                var canvas=document.getElementById('canvas');
+                                var ancho=canvas.width;
+                                if (canvas.getContext) {
+                                        var ctx=canvas.getContext('2d');
+                                        
+
+                                        //punto
+                                        ctx.beginPath();
+                                        ctx.strokeStyle='#d12293';
+                                        ctx.fillStyle='#d12293';
+                                        ctx.arc(ancho/2+C2-C4,ancho/2+C1-C3,5,0,2*Math.PI,false);
+                                        ctx.closePath();
+                                        ctx.fill();
+                                }        
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whole-wrap">
+            <div class="container box_1170" style="background: 'black;'">
+                <div class="section-top-border">
+                    <h3 class="tituloBungee">¿Cómo obtienes y utilizas tus conocimientos?</h3>
+                    <div class="tablaInnoResultados">
+                        <div>
+                            <p>La creatividad requiere un equilibrio de conocimiento, imaginación y buen juicio. La ciencia ha identificado dos maneras opuestas en cómo aprende la gente, es decir, como adquiere su conocimiento. Una forma es experimentando: sumergiéndose y "ensuciándose las manos". De repente, exclaman: "¡Ya, lo entiendo!" La manera opuesta es pensar: no involucrarse, retroceder, y calcularlo analíticamente ("poniendo los puntos sobre las íes"). La ciencia también ha identificado dos maneras opuestas en las cuales las personas utilizan su  conocimiento. Una forma es crear opciones o ideas. La otra manera es evaluar opciones o ideas.</p>
+                            <p><em class="naranja">• Aquí </em>se muestra cómo prefieres adquirir tus conocimientos mientras que </p>
+                            <p><em class="azul">• aquí </em>se muestra como usas esos conocimientos. </p>
+                        </div>
+                        <canvas id="canvasCono" width="600" height="600" style="margin: 0 auto 0 auto;display: block;">
+                                <script type="text/javascript">
+                                    var canvas = document.getElementById('canvasCono');
+                                    var ancho=canvas.width;
+                                    if (canvas.getContext) {
+                                        var ctx=canvas.getContext('2d');
+                                        ctx.strokeStyle='#adadad';
+                                        ctx.fillStyle='#adadad';
+                                        ctx.beginPath();
+                                        ctx.moveTo(40,ancho/2);
+                                        ctx.lineTo(ancho-40,ancho/2);
+                                        ctx.closePath();
+                                        ctx.stroke();
+                                        ctx.beginPath();
+                                        ctx.moveTo(ancho/2,40);
+                                        ctx.lineTo(ancho/2,ancho-40);
+                                        ctx.closePath();
+                                        ctx.stroke();
+                                        ctx.font = "10pt comfortaa";
+                                        ctx.save();
+                                        //ctx.rotate(Math.PI/2);
+                                        ctx.textAlign="center";
+                                        ctx.fillText("Experiencia",ancho/2,20);
+                                        ctx.fillText("Formación de ideas",ancho-70,20+ancho/2);
+                                        ctx.fillText("Pensamiento",ancho/2,ancho-20);
+                                        ctx.fillText("Evaluación",50,20+ancho/2);
+                                        ctx.restore();
+                                        //punto
+                                        ctx.beginPath();
+                                        ctx.fillStyle='#e69138ff';
+                                        ctx.arc(ancho/2,ancho/2+C1-C3,10,0,2*Math.PI,false);
+                                        ctx.closePath();
+                                        ctx.fill();
+                                        ctx.beginPath();
+                                        ctx.fillStyle='#64b6f5';
+                                        ctx.arc(ancho/2+C2-C4,ancho/2,10,0,2*Math.PI,false);
+                                        ctx.closePath();
+                                        ctx.fill();
+                                    }
+                                </script>
+                            </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whole-wrap">
+            <div class="container box_1170" style="background: 'black;'">
+                <div class="section-top-border">
+                    <h3 class="tituloBungee">Profundizando en tu estilo preferido:<br> ¿Hasta dónde puedes llegar?</h3>
+                    <div class="tablaInnoResultados">
+                        <div>
+                            <p>"La distancia que guarda el origen de tu perfil hacia el "centro de gravedad", aporta más información sobre tu tendencia a decantarte hacia tu propio estilo y no hacia los otros. Por ejemplo, encontrarse en el anillo interior de los tres círculos, indicaría un perfil más equilibrado (teniendo preferencias secundarias sustanciales para los otros estilos), mientras que encontrarse en el círculo medio o más externo indicaría estar más "inclinado" o "especializado" en tu estilo de perfil preferido y más alejado de los demás.<br>Lo principal es ser consciente de tu centro de gravedad y lo que significa, para tu propia resolución eficiente de problemas y el éxito de la innovación. Innovar requiere un alto rendimiento en cada una de las cuatro etapas del proceso. Es posible que debas prestar atención adicional en ciertas etapas, para ampliar tu rendimiento o en ocasiones tener en cuenta otras para complementar tu propio perfil. Con respecto a las interacciones con otros, puede haber veces que sientas que debes contribuir con tu estilo de forma más enérgica, al equipo. En otras ocasiones podrías ""declinar” y dejar que otros asuman el control."</p>
+                        </div>
+                        <canvas id="canvasProf" width="600" height="600" style="margin: 0 auto 0 auto;display: block;">
+                                <script type="text/javascript">
+                                    var canvas = document.getElementById('canvasProf');
+                                    var ancho=canvas.width;
+                                    if (canvas.getContext) {
+                                        var ctx=canvas.getContext('2d');
+                                        ctx.strokeStyle='#adadad';
+                                        ctx.fillStyle='#adadad';
+                                        ctx.beginPath();
+                                        ctx.moveTo(40,ancho/2);
+                                        ctx.lineTo(ancho-40,ancho/2);
+                                        ctx.closePath();
+                                        ctx.stroke();
+                                        ctx.beginPath();
+                                        ctx.moveTo(ancho/2,40);
+                                        ctx.lineTo(ancho/2,ancho-40);
+                                        ctx.closePath();
+                                        ctx.stroke();
+                                        ctx.font = "10pt comfortaa";
+                                        ctx.save();
+                                        //ctx.rotate(Math.PI/2);
+                                        ctx.textAlign="center";
+                                        ctx.fillText("Experiencia",ancho/2,20);
+                                        ctx.fillText("Formación de ideas",ancho-70,20+ancho/2);
+                                        ctx.fillText("Pensamiento",ancho/2,ancho-20);
+                                        ctx.fillText("Evaluación",50,20+ancho/2);
+                                        ctx.restore();
+                                        
+                                        //circulos offset
+                                        ctx.globalAlpha=0.5;
+                                        ctx.fillStyle='#4a49499a';
+                                        ctx.arc(ancho/2,ancho/2,25,0,2*Math.PI,false);
+                                        ctx.closePath();
+                                        ctx.fill();
+                                        ctx.fillStyle='#adadad9a';
+                                        ctx.arc(ancho/2,ancho/2,50,0,2*Math.PI,false);
+                                        ctx.closePath();
+                                        ctx.fill();
+                                        //punto
+                                         ctx.globalAlpha=1;
+                                        ctx.beginPath();
+                                        ctx.fillStyle='#d12293';
+                                        ctx.arc(ancho/2+C2-C4,ancho/2+C1-C3,5,0,2*Math.PI,false);
+                                        ctx.closePath();
+                                        ctx.fill();
+                                        //leyenda
+                                        ctx.beginPath();
+                                        ctx.arc(50,ancho-100,5,0,2*Math.PI,false);
+                                        ctx.closePath();
+                                        ctx.strokeStyle='#000000';
+                                        ctx.fillStyle='#000000';
+                                        ctx.stroke();
+                                        ctx.beginPath();
+                                        ctx.textAlign='left';
+                                        ctx.fillStyle='#000000';
+                                        ctx.fillText('Equilibrio',60,ancho-95);
+                                        ctx.closePath();
+                                        ctx.beginPath();
+                                        ctx.arc(50,ancho-70,5,0,2*Math.PI,false);
+                                        ctx.fillStyle='#4a49499a';
+                                        ctx.closePath();
+                                        ctx.stroke();
+                                        ctx.fill();
+                                        ctx.beginPath();
+                                        ctx.fillStyle='#000000';
+                                        ctx.fillText('Tendencia',60,ancho-65);
+                                        ctx.closePath();
+                                        ctx.beginPath();
+                                        ctx.arc(50,ancho-40,5,0,2*Math.PI,false);
+                                        ctx.fillStyle='#adadad9a';
+                                        ctx.closePath();
+                                        ctx.stroke();
+                                        ctx.fill();
+                                        ctx.beginPath();
+                                        ctx.fillStyle='#000000';
+                                        ctx.fillText('Especialización',60,ancho-35);
+                                        ctx.closePath();
+                                        
+                                    }
+                                </script>
+                            </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whole-wrap">
+            <div class="container box_1170" style="background: 'black;'">
+                <div class="section-top-border">
+                    <h3 class="tituloBungee">Cómo te comparas con los demás</h3>
+                    <div class="tablaInnoResultados">
+                        <div>
+                            <p id="comparativaTexto"><?php echo $textoComparativa;?></p>
+                            <!--<script type="text/javascript">
+                                var textoComp=document.getElementById('comparativaTexto');
+                                switch(per){
+                                    case "Conceptualizador":
+                                        textoComp.innerHTML="<p>Como Conceptualizador, formas parte del segundo grupo más pequeño de gente que realiza el perfil de Innovación. Nuestros datos indican que los conceptualizadores a menudo están trabajando en roles estratégicos dentro de las empresas o responsabilidades donde la comprensión forma parte de su trabajo.<br>Todos somos una mezcla de estilos y el perfil de innovación mide el estado de pensamiento al que tiende una persona en lugar de analizar un rasgo de personalidad.<br>El estilo opuesto es el Implementador. Los conflictos potenciales que puedas tener en un entorno de trabajo o de equipo, pueden darse con los implementadores, ya que tenéis estilos opuestos.<br>Los Conceptualizadores suelen percibir a los Implementadores como personas:<br>• Poco confiables, ya que son poco trabajadores<br>• Impulsivas, no parece que piensen antes de actuar<br>• Testarudas<br><br>Los implementadores suelen ver a los Conceptualizadores como personas que:<br>• No se les debe pagar<br>• Nunca se los ve hacer nada<br>• Siempre los ves pensando<br></p>";
+                                        break;
+                                    case "Generador":
+                                        texto.innerHTML="soy genenennenene";
+                                        break;
+                                    case "Optimizador":
+                                        texto.innerHTML="soy opttititit";
+                                        break;
+                                    case "Implementador":
+                                        texto.innerHTML="soy imlelele";
+                                        break;
+                                    default:
+                                    texto.innerHTML="nnonooononono";
+                                        break;  
+                                }
+                            </script>-->
+                        </div>
+                        <canvas id="canvasComp" width="600" height="600" style="margin: 0 auto 0 auto;display: block;">
+                                <script type="text/javascript">
+                                    var canvas = document.getElementById('canvasComp');
+                                    var ancho=canvas.width;
+                                    if (canvas.getContext) {
+                                        var ctx=canvas.getContext('2d');
+                                        //imagen de fondo
+                                        var imagenFondoComp=new Image();
+                                        imagenFondoComp.width=ancho;
+                                            ctx.globalAlpha=0.1;  
+                                        imagenFondoComp.src='assets/img/TEST_INNOVACION/RESULTADOS_FONDO_COMP.png';
+                                        imagenFondoComp.onload=function(){
+                                            ctx.drawImage(imagenFondoComp,0,0);
+                                        }
+
+                                        ctx.strokeStyle='#adadad';
+                                        ctx.fillStyle='#adadad';
+                                        ctx.globalAlpha=1; 
+                                        ctx.beginPath();
+                                        ctx.moveTo(40,ancho/2);
+                                        ctx.lineTo(ancho-40,ancho/2);
+                                        ctx.closePath();
+                                        ctx.stroke();
+                                        ctx.beginPath();
+                                        ctx.moveTo(ancho/2,40);
+                                        ctx.lineTo(ancho/2,ancho-40);
+                                        ctx.closePath();
+                                        ctx.stroke();
+                                        ctx.font = "10pt comfortaa";
+                                        ctx.save();
+                                        //ctx.rotate(Math.PI/2);
+                                        ctx.textAlign="center";
+                                        ctx.fillText("Experiencia",ancho/2,20);
+                                        ctx.fillText("Formación de ideas",ancho-70,20+ancho/2);
+                                        ctx.fillText("Pensamiento",ancho/2,ancho-20);
+                                        ctx.fillText("Evaluación",50,20+ancho/2);
+                                        ctx.restore();
+                                        //punto
+                                        ctx.beginPath();
+                                        ctx.fillStyle='#d12293';
+                                        ctx.arc(ancho/2+C2-C4,ancho/2+C1-C3,5,0,2*Math.PI,false);
+                                        ctx.closePath();
+                                        ctx.fill();
+
+                                    }
+                                </script>
+                            </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whole-wrap">
+            <div class="container box_1170" style="background: 'black;'">
+                <div class="section-top-border">
+                    <h3 class="tituloBungee">Que significa esto</h3>
+                    <div class="tablaInnoResultados">
+                        <div>
+                            <p style="font-size:14px;margin: 20px;">En primer lugar, trata de permanecer "en el momento". Tu (y todos los demás) estáis continuamente pensando y solucionando problemas desde el momento en que os despertáis. Esta es la naturaleza de la vida. Para ser un pensador innovador y solucionador de problemas, trata de ser consciente en todo momento de tu estilo preferido y tu ajuste con la rueda de la innovación (proceso de resolución de problemas creativo de ocho pasos, véase más adelante). Puedes estar seguro de que tienes un escudo a prueba de balas para protegerte, no importa cuál sea el problema al que debes enfrentarte. Recuerda que mientras tengas un estilo favorito, también tienes el proceso completo de ocho pasos para dirigir tu camino a través de la confusión.</p>
+                            <p id="significadoTexto" style="font-size:14px;margin: 20px;"></p>
+                            <script type="text/javascript">
+                                var significadoText=document.getElementById('significadoTexto');
+                                switch(per){
+                                    case'Conceptualizador':
+                                        significadoText.innerHTML="Como un Conceptualizador, eres un desarrollador de ideas y un pensador paciente. (Pasos 3 y 4 en la rueda de innovación más abajo). Eres capaz de juntar las piezas para formar el gran lienzo y desarrollar su comprensión. La definición del problema es fundamental para ti. Esto es muy importante, pero recuerda que hay algo más a parte de la innovación. Para aumentar tu rendimiento innovador, asegúrate de avanzar en línea a tu pensamiento. Tal vez asociarte con alguien que sea diferente de ti, digamos un implementador, podrá ayudarte a hacer progresos a través de la rueda de la innovación y a realizar alguna acción valiosa en tus ideas.";
+                                    break;
+                                    case 'Optimizador':
+                                        significadoText.innerHTML="";
+                                    break;
+                                    case 'Generador':
+                                        significadoText.innerHTML="";
+                                    break;
+                                    case 'Implementador':
+                                        significadoText.innerHTML="";
+                                    break;
+                                    default:
+                                    break;    
+                                }
+                                
+                            </script>
+                        </div>
+                        <div>
+                            <p style="font-size:14px;margin: 20px;">No importa qué estilo de perfil prefiera un miembro del equipo, deben aprender a utilizar sus diferencias de estilo con otros, de manera complementaria, para ayudar a su equipo a ser innovador. Es importante que cada persona aprecie el valor del estilo de cada uno, generando, conceptualizando, optimizando e implementando, y apoyar el trabajo a través del proceso de innovación completo y de esta forma alcanzar soluciones de alto impacto y disfrutar haciéndolo. Los miembros del equipo pueden aprender a pensar en cualquiera de los cuatro estilos de perfil para complementar el pensamiento de otros. De hecho, la orientación preferida de un individuo es menos importante que su capacidad de cambiar entre las diferentes orientaciones según sea necesario. Es vital no tener personas que operan en diferentes estilos simultáneamente sin darse cuenta y "anulándose mutuamente". Los cuatro estilos contribuyen única y exclusivamente al proceso de innovación.</p>
+                            <p id="equipoTexto" style="font-size:14px;margin: 20px;"></p>
+                            <script type="text/javascript">
+                                var equipoText=document.getElementById('equipoTexto');
+                                switch(per){
+                                    case 'Conceptualizador':
+                                        equipoText.innerHTML="Como Conceptualizador, tu contribución al equipo es la de crear las opciones sobre las alternativas de entender y definir un problema u oportunidad. Puedes ayudar a tu equipo a evitar lanzarse a unas soluciones prematuras y en su lugar invertir el tiempo para desarrollar una imagen clara de lo que debería ser el objetivo real. El equipo se sorprenderá de que ideas muy interesantes, comiencen a fluir casi de inmediato.";
+                                    break;
+                                    case 'Optimizador':
+                                        equipoText.innerHTML="";
+                                    break;
+                                    case 'Generador':
+                                        equipoText.innerHTML="";
+                                    break;
+                                    case 'Implementador':
+                                        equipoText.innerHTML="";
+                                    break;
+                                    default:
+                                    break;  
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whole-wrap">
+            <div class="container box_1170" style="background: 'black;'">
+                <div class="section-top-border">
+                    <h3 class="tituloBungee">Los 4 estilos en las organizaciones</h3>
+                    
+                        <div>
+                            <p>En las organizaciones, los individuos tienen diferentes preferencias a la hora de adquirir y utilizar el conocimiento y también en cada una de las etapas del proceso de innovación. Generar ideas para nuevos productos, servicios y métodos debe comenzar en alguna parte. Los individuos que tienden hacia la generación, están adquiriendo experiencia y analizando el entorno continuamente, recolectando datos y señales de clientes, proveedores y otros, y sugiriendo posibles oportunidades de cambio y mejora.<br>Por lo tanto, la etapa de generación es donde se plantean nuevas informaciones y posibilidades, generalmente no totalmente desarrolladas, sino en forma de puntos de partida para nuevos proyectos. Las personas con estilo conceptualizador dominante, lideran la recopilación de hechos y fragmentos de ideas, desde la etapa de generación hasta su definición. Para ellos, los problemas y desafíos intuitivos e ideas y proyectos más claramente desarrollados, merecen una evaluación más profunda. Los conceptualizadores habilidosos dan una estructura sólida a ideas y oportunidades incipientes. Las personas con tendencia hacia la optimización, por lo general lideran esta habilidad de recoger las ideas bien definidas y encuentran la mejor solución práctica para desarrollar planes eficientes detallados. Por último, los responsables de la implementación llevan adelante las soluciones y planes prácticos, además de convencer, a colegas o clientes, del valor de los cambios adaptando las soluciones y planes para adecuarlos a situaciones y condiciones de la vida real.<br>Cada cuadrante de la Rueda de Innovación, corresponde a una etapa específica del proceso de innovación. Los dos primeros cuadrantes representan la generación de problemas (encontrar el problema y los hechos) y la conceptualización de problemas (definición de los problemas y encontrar ideas) ya que forman las dos primeras etapas del proceso de innovación y el tercer y cuarto cuadrantes representan la optimización de soluciones (evaluación y selección y planificación) y la implementación de la solución (obtención de la aceptación y acción) como las dos etapas finales del proceso de innovación.</p>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+            
+
+
+    </main>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <h1 class="m-0 text-white"><img src="img/logoMBlanco.png">Rubén Jerónimo</h1>
+                        </a>
+                        <p class="mt-3 mb-4">Si quieres que te envíe información de vez en cuando, deja tu dirección de email y me pondré en contacto contigo.</p>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3" placeholder="Tu Email">
+                                <button class="btn btn-dark">Envía</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Mantente en contacto</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0"> Molino de la Navata 14, Galapagar, MADRID</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">ruben.jeronimo.fernandez@gmail.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+34 679 068 143</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Ve a:</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="#activando"><i class="bi bi-arrow-right text-primary me-2"></i>Activando</a>
+                                <a class="text-light mb-2" href="#servicios"><i class="bi bi-arrow-right text-primary me-2"></i>Servicios</a>
+                                <a class="text-light mb-2" href="#sobremi"><i class="bi bi-arrow-right text-primary me-2"></i>Sobre mi</a>
+                                <a class="text-light mb-2" href="#blog"><i class="bi bi-arrow-right text-primary me-2"></i>Blog</a>
+                                <a class="text-light" href="#contacto"><i class="bi bi-arrow-right text-primary me-2"></i>Contacto</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Textos legales</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="privacidad.html"><i class="bi bi-arrow-right text-primary me-2"></i>Politica privacidad</a>
+                                <a class="text-light mb-2" href="cookies.html"><i class="bi bi-arrow-right text-primary me-2"></i>Cookies</a>
+                                <a class="text-light mb-2" href="compras.html"><i class="bi bi-arrow-right text-primary me-2"></i>Política de compras</a>
+                                <a class="text-light mb-2" href="terminos.html"><i class="bi bi-arrow-right text-primary me-2"></i>Terminos y condiciones</a>
+                                <a class="text-light mb-2" href="legal.html"><i class="bi bi-arrow-right text-primary me-2"></i>Aviso legal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Rubén Jerónimo Fernández</a>. Copyright ©2023 Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
